@@ -1,27 +1,34 @@
+"use client"
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Naveber = () => {
+
+  const pathname = usePathname()
+
+
   const links = (
     <>
       <li>
-        <Link href="../Blog">Blog</Link>
+        <Link className={pathname === '/Blog' ? "text-blue-500":''} href="../Blog">Blog</Link>
       </li>
       <li>
-        <Link href="../docs">Docs</Link>
+        <Link className={pathname === '/docs' ? "text-blue-500":''} href="../docs">Docs</Link>
       </li>
 
       <li>
-        <Link href="../Showcase">Showcase</Link>
+        <Link className={pathname === '/Showcase' ? "text-blue-500":''} href="../Showcase">Showcase</Link>
       </li>
       <li>
-        <Link href="../Templates">Templates</Link>
+        <Link className={pathname === '/About' ? "text-blue-500":''} href="../About">About</Link>
       </li>
        <li>
-        <Link href="../dashdoard">Dashboard</Link>
+        <Link className={pathname === '/dashdoard' ? "text-blue-500":''} href="../dashdoard">Dashboard</Link>
       </li>
       <li>
-        <Link href="../users">Users</Link>
+        <Link className={pathname === '/users' ? "text-blue-500":''} href="../users">Users</Link>
       </li>
       
     </>

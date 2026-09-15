@@ -45,6 +45,8 @@ const blogsData = [
   }
 ];
 
+
+
 const PostDetailPage = async ({params}) => {
 
     const {PostId}= await params
